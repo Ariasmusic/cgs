@@ -1,0 +1,116 @@
+body {
+    background-color: #657381;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    max-width: 100%;
+}
+
+nav .logo img {
+    max-width: 100px;
+
+    border-radius: 12px;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+
+    border-radius: 12px;
+    background: #657381;
+    box-shadow: 20px 20px 60px #56626e,
+        -20px -20px 60px #748494;
+}
+
+.menu li {
+    list-style: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    border-radius: 12px;
+    box-shadow: inset 20px 20px 60px #56626e,
+        inset -20px -20px 60px #748494;
+    transition: box-shadow .5s ease-in;
+}
+
+.open {
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:600px) {
+    nav {
+        flex-direction: row;
+        gap: 100px;
+    }
+
+    .menu {
+        position: absolute;
+        top: -300%;
+
+        max-width: 90%;
+        margin: 20px auto;
+        width: 90%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #084368;
+        z-index: 1;
+        transition: top .7s ease-in-out;
+    }
+
+    .menu li {
+        color: rgb(255, 255, 255);
+        text-align: left;
+        width: 90%;
+        font-size: 25px;
+    }
+
+    .menu li:hover {
+        box-shadow: inset 20px 20px 60px #073958,
+            inset -20px -20px 60px #094d78;
+        border-bottom: solid 2px #f5efefb1;
+        transition: .5s border-bottom ease-in;
+    }
+
+    .open {
+        color: rgb(0, 0, 0);
+        display: flex;
+        z-index: 999;
+    }
+    .escudo img{
+        position: relative;
+        top: 70px;
+        max-width: 200px;
+        width: 150px;
+        margin: 0px auto;
+
+
+        filter: drop-shadow(2px 2px 2px rgba(255, 255, 255, 0.594));
+    }
+    .sub-menu{
+        display: none;
+        position: relative;
+    }
+    .sub-menu li{
+        font-size: 15px;
+        text-align: right;
+    }
+    .active{
+        display: flex;
+        flex-direction: column;
+    }
+}

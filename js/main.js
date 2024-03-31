@@ -20,3 +20,15 @@ document.getElementById('open').addEventListener('click', function(){
 document.getElementById("sub-menu").addEventListener('click', function(){
     document.getElementById("sub-m").classList.toggle("active");
 });
+let ct = 0;
+document.getElementById("sub-sub-menu").addEventListener('click', function () {
+    // document.getElementById("sub-sub-m").classList.toggle("activ");
+    if (ct == 0) {
+        document.getElementById("sub-sub-m").style.display = "flex";
+        document.getElementById("sub-sub-m").style.flexDirection = "column";
+        ct++;
+    }else{
+        document.getElementById("sub-sub-m").style.display = "none";
+        ct--;
+    }
+});

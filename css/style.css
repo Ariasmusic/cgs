@@ -113,4 +113,14 @@ nav .logo img {
         display: flex;
         flex-direction: column;
     }
+    .activ{
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-sub-menu{
+        display: none;
+    }
+    .sub-sub-menu li{
+        text-align: left;
+    }
 }
